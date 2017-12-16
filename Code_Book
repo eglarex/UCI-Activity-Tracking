@@ -1,0 +1,34 @@
+a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md
+
+the location of files containing the dataset are represented using following variables:
+
+test_x: the location of X_test.txt
+test_y: the location of y_test.txt
+train_x: the location of X_train.txt
+train_y: the location of y_train.txt
+subject_train: the location of subject_train.txt
+subject_test: the location of subject_test.txt
+features: the location of features.txt
+
+the extracted dataset are stored in the following variables:
+
+ttx: the variable used to hold the dataset extracted from test_x using read.table()
+tty: the variable used to hold the dataset extracted from test_y using read.table()
+trx: the variable used to hold the dataset extracted from train_x using read.table()
+try: the variable used to hold the dataset extracted from train_y using read.table()
+subject_tr: the variable stores the subject identity of training set
+subject_tt: the variable stores the subject identify of test set
+features_label: this variable stores the feature names for each variable in datasets
+
+
+After extracting datasets from files, the training and testing set of x and y are jiont togather respectively using row wise combination namel set_x and set_y.
+
+The joint X dataset and y dataset are then combined using column-wise operation as a dataset named set_all.
+
+The actvity names are transformed into names from numerical values and appended to the last column of set_all.
+
+The combind training and test subject names are stored in subject_all and appended to the first column of set_all.
+
+The set_idependent varaible stores mean and std related variables in set_all grouped according to Activity and SubjectNames.
+
+The set_old contains the Activity group in the first column, the subject names in the second column and mean value for repective variable in the remaining columns.
